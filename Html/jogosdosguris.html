@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@Only_Resenha_ — Jogos</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕹️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/guris.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="home.html" class="nav-logo">@Only_Resenha_</a>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="equipe.html">Equipe</a></li>
+      <li><a href="jogos.html" class="nav-active">Jogos</a></li>
+    </ul>
+  </nav>
+
+  <!-- TELA ARCADE DE SELEÇÃO -->
+  <div id="tela-selecao">
+
+    <div class="arcade-header">
+      <p class="arcade-sub">insira suas horas vagas para continuar</p>
+      <h1 class="arcade-title">GAME<span>ZONE</span></h1>
+      <p class="arcade-credit">▼ escolha seu veneno ▼</p>
+    </div>
+
+    <div class="arcade-grid">
+
+      <button class="arcade-card" onclick="abrirJogo('termo')">
+        <div class="arcade-card-screen">
+          <span class="arcade-card-icon">🟩</span>
+          <div class="arcade-scanlines"></div>
+        </div>
+        <div class="arcade-card-info">
+          <span class="arcade-card-name">TERMO</span>
+          <span class="arcade-card-desc">adivinhe a palavra do dia — tema: internet</span>
+          <span class="arcade-card-tag">palavras</span>
+        </div>
+      </button>
+
+      <button class="arcade-card" onclick="abrirJogo('clicker')">
+        <div class="arcade-card-screen">
+          <span class="arcade-card-icon">🔥</span>
+          <div class="arcade-scanlines"></div>
+        </div>
+        <div class="arcade-card-info">
+          <span class="arcade-card-name">CLICKER</span>
+          <span class="arcade-card-desc">clica até não aguentar mais</span>
+          <span class="arcade-card-tag">idle</span>
+        </div>
+      </button>
+
+      <button class="arcade-card" onclick="abrirJogo('cobra')">
+        <div class="arcade-card-screen">
+          <span class="arcade-card-icon">🐍</span>
+          <div class="arcade-scanlines"></div>
+        </div>
+        <div class="arcade-card-info">
+          <span class="arcade-card-name">COBRINHA</span>
+          <span class="arcade-card-desc">clássico que nunca falha</span>
+          <span class="arcade-card-tag">arcade</span>
+        </div>
+      </button>
+
+      <button class="arcade-card" onclick="abrirJogo('dino')">
+        <div class="arcade-card-screen">
+          <span class="arcade-card-icon">🦕</span>
+          <div class="arcade-scanlines"></div>
+        </div>
+        <div class="arcade-card-info">
+          <span class="arcade-card-name">DINOSSAURO</span>
+          <span class="arcade-card-desc">sem internet? aqui tem sempre</span>
+          <span class="arcade-card-tag">runner</span>
+        </div>
+      </button>
+
+    </div><!-- /arcade-grid -->
+  </div><!-- /tela-selecao -->
+
+  <!-- CONTAINER DOS JOGOS -->
+  <div id="jogo-container" class="hidden">
+    <div class="jogo-topbar">
+      <button class="btn-voltar" onclick="voltarSelecao()">← voltar</button>
+      <span class="jogo-topbar-nome" id="jogo-nome-atual"></span>
+      <span></span>
+    </div>
+    <div id="jogo-area"></div>
+  </div>
+
+  <footer class="footer">
+    <p>feito com muita resenha e pouco sono · @Only_Resenha_ 🔥</p>
+  </footer>
+
+  <!-- JOGOS EM JS SEPARADOS -->
+  <script src="../Js/termo.js"></script>
+  <script src="../Js/clicker.js"></script>
+  <script src="../Js/tuamae.js"></script>
+  <script src="../Js/dino.js"></script>
+  <script src="../Js/gamesguris.js"></script>
+</body>
+</html>
